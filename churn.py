@@ -2,7 +2,7 @@ import joblib
 
 joblib.dump(lr, 'logistic_model.pkl')
 joblib.dump(rf, 'random_forest_model.pkl')
-You said:
+
 import pandas as pd
 df= pd.read_csv("Customer churn.csv")
 df.head()                                                                                                                                                                   df.info()                                                                                                                                                                      df.describe()                                                                                                                                                                df.isnull().sum()                                                                                                                                                             df['Churn'] = df['Churn'].map({'Yes': 1, 'No': 0})
@@ -33,4 +33,5 @@ rf.fit(X_train, y_train)
 y_pred_rf = rf.predict(X_test)
 print("Random Forest Accuracy:", accuracy_score(y_test, y_pred_rf))
 print(classification_report(y_test, y_pred_rf))                                                                                                                          print("Logistic Regression Accuracy:", accuracy_score(y_test, y_pred_lr))
+
 print("Random Forest Accuracy:", accuracy_score(y_test, y_pred_rf))
