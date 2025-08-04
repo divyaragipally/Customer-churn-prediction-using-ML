@@ -1,0 +1,7 @@
+import joblib
+
+# Load the saved model
+model = joblib.load('logistic_model.pkl')
+
+# Use it to predict
+predictions = model.predict(X_test)
