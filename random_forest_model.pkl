@@ -1,2 +1,3 @@
+import joblib
 rf_loaded = joblib.load('random_forest_model.pkl')
 predictions = rf_loaded.predict(X_test)
